@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include "tp1.h"
+#include "tp1funciones.h"
 
 int suma (int valor1, int valor2);
 int resta (int valor1, int valor2);
@@ -20,6 +20,7 @@ int multiplicacion(int valor1, int valor2);
 int factorial(int valor1);
 
 int main(void) {
+
 	setbuf(stdout, NULL);
 	int num1;
 	int num2;
@@ -29,24 +30,32 @@ int main(void) {
 	int multiplicar;
 	int fact;
 	char operacion;
-	char resp = 's';
+	char resp;
 
-	printf("ingrese 1er operando (A)");
-	fpurge(stdin);
-	scanf("%d", &num1);
-	printf("\ningrese 2do operando (B)");
-	fpurge(stdin);
-	scanf("%d",&num2);
-
-	do{
-
+	printf("\nEste menu muestra las operaciones a realizar con dos operandos");
 	printf("\na) Calcular la suma (A+B)");
 	printf("\nb) Calcular la resta (A-B)");
 	printf("\nc) Calcular la division (A/B)");
 	printf("\nd) Calcular la multiplicacion (A*B)");
 	printf("\ne) Calcular el factorial (A!)");
 
-	printf("\n ingrese la operacion que desea realizar");
+	printf("\nquiere realizar alguna de estas operaciones? s/n");
+	fpurge(stdin);
+	scanf("%c",&resp);
+
+
+
+	do{
+
+		printf("ingrese 1er operando (A)");
+		fpurge(stdin);
+		scanf("%d", &num1);
+		printf("\ningrese 2do operando (B)");
+		fpurge(stdin);
+		scanf("%d",&num2);
+
+
+	printf("\n ingrese la operacion que desea realizar: a/b/c/d/e");
 	fpurge(stdin);
 	scanf("%c",&operacion);
 
@@ -99,8 +108,6 @@ int main(void) {
 	printf("\nquiere realizar otra operacion con los mismo numeros? s/n");
 	fpurge(stdin);
 	scanf("%c", &resp);
-
-	printf("akjhsjakhsja");
 
 
 	}while(resp == 's');
