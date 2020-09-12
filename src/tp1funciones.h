@@ -1,3 +1,9 @@
+char menu();
+/*
+ * BRIEF: muestra el menu de opciones de la calculador
+ * PARAM: -
+ * RETURN: devuelve la opcion elegida por el usuario
+ */
 
 int suma (int valor1, int valor2);
 /*
@@ -37,6 +43,8 @@ int factorial(int valor1);
  * PARAM: operando
  * RETURN: el resultado del factorial
  */
+
+
 
 
 
