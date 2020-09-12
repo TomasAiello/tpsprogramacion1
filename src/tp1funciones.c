@@ -18,7 +18,7 @@ char menu(){
 	printf("\nd) Calcular la multiplicacion (A*B)");
 	printf("\ne) Calcular el factorial (A!)");
 	printf("\n ingrese la operacion que desea realizar");
-	furge(stdin);
+	fpurge(stdin);
 	scanf("%c",&operacion);
 
 	switch(operacion){
@@ -32,7 +32,7 @@ char menu(){
 			do{
 			printf("\n Esta opcion no esta contemplada");
 			printf("\n ingrese la operacion que desea realizar: a/b/c/d/e");
-			fflush(stdin);
+			fpurge(stdin);
 			scanf("%c",&operacion);
 			}while(operacion != 'a' && operacion != 'b' && operacion !='c' && operacion != 'd' && operacion != 'e' );
 			break;
