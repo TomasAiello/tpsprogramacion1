@@ -38,6 +38,20 @@ int main(void)
 
 	operacion = menu();
 
+	if(operacion == 'e'){
+	printf("\n ingrese operando (A)");
+	fpurge(stdin);
+	scanf("%d", &num1);
+	}
+	else{
+	printf("\n ingrese 1er operando (A)");
+	fpurge(stdin);
+	scanf("%d", &num1);
+	printf("\n ingrese 2do operando (B)");
+	fpurge(stdin);
+	scanf("%d", &num2);
+	}
+
 	switch(operacion){
 
 		case 'a':
