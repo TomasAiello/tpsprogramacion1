@@ -7,7 +7,6 @@
  Description : Hello World in C, Ansi-style
  ============================================================================
  */
-// como escribir la condicion del else
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -74,7 +73,7 @@ int main(void) {
 		case 2:
 
 			strcpy(msg,"\nIngrese el numero de ID" );
-			strcpy(msgError, "\nID inexistente"); // esto solo sirve si el empleado fue dado de alta pero no de baja, creo
+			strcpy(msgError, "\nID inexistente");
 			min = 1;
 			max = acumId;
 			getInt(&auxId, msg, msgError, min, max, RETRY);

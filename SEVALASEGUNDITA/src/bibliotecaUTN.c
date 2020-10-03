@@ -270,7 +270,7 @@ int findEmployeeById(employee* list, int len, int id, int* posicion){
 			}while(resp == 's');
 		}
 		else{
-			printf("\n El ID %d ha sido dado de BAJA");
+			printf("\n El ID %d ha sido dado de BAJA", id);
 		}
 
 
@@ -318,7 +318,6 @@ int removeEmployee(employee* list, int len, int id, int* posicion){
 int sortEmployees(employee* list, int len, int order){
 
 	// order == 0 ascendente  , order == 1 descendente por apellido
-	//PRIMER CRITERIO APELLIDO, SI TIENEN apellido identico por sector strcmp devuelve > 0, < 0 o 0 (si son iguales)
 
 	int aux, i, j;
 	float auxSal = 0;
@@ -417,164 +416,3 @@ int printEmployees(employee* list, int length)
 
  return 0;
 }
-
-
-/*
-int utn_mostrar(int edades[], float sueldos[], int tam){
-
-	int i;
-
-	for(i = 0; i<tam; i++){
-	printf("la persona de edad : %d, tiene un sueldo de: %.2f \n", edades[i], sueldos[i]);
-	}
-
-	return 0;
-}
-
-void getString(char mensaje[], char input[]){
-	printf("%s", mensaje);
-	fgets(input, 20, stdin);
-}
-
-int printArrayStr(char pArray[][TAM], int limite){
-
-	int retorno = -1;
-	int i;
-
-	if (pArray != NULL && limite > 0){
-
-		for (i =0; i <limite; i++){
-
-			printf("%s", pArray[i]);
-			printf("\n");
-		}
-		retorno = 0;
-	}
-	return retorno;
-}
-
-
- int ordenar2ArrayStr(char pArrayNom[][TAM], char pArrayApe[][TAM], int limite){
-
-	int flagDesordenado = -1;
-	int i;
-	char auxNom[TAM];
-	char auxApe[TAM];
-
-	while(flagDesordenado == -1)
-	{
-		flagDesordenado = 0;
-
-		for (i =0; i <limite; i++)
-		{
-			if(strcmp(pArrayApe[i], pArrayApe[i+1])>0)
-			{
-				strcpy(auxNom, pArrayNom[i]);
-				strcpy(pArrayNom [i], pArrayNom[i+1]);
-				strcpy(pArrayNom[i+1],pArrayNom);
-
-				strcpy(auxApe, pArrayApe[i]);
-				strcpy(pArrayApe [i], pArrayApe[i+1]);
-				strcpy(pArrayApe[i+1],pArrayApe);
-
-				flagDesordenado = -1;
-			}
-		}
-	}
-
-	return flagDesordenado;
-}
-
-
-int utn_initArray(int array1[], int tam){ // un solo array
-
-	int i;
-
-	for(i = 0; i<tam; i++){
-		array1[i] = 0;
-	}
-
-	return 0;
-}
-
-int utn_continuar(char* resp){
-
-	char respuesta;
-	printf("desea continuar? s/n");
-	fpurge(stdin);
-	scanf("%c", &respuesta);
-	*resp = respuesta;
-
-	return 0;
-
-}
-int utn_cargaSec(int array1[], float array2[], int tam){
-
-	int i;
-
-	for (i = 0; i<tam; i++){
-
-	printf("ingrese dato en la posicion del array1 n %d : \n", i);
-	fpurge(stdin);
-	scanf("%d", &array1[i]);
-
-	printf("ingrese dato en la posicion del array2 n  %d : \n", i);
-	fpurge(stdin);
-	scanf("%f", &array2[i]);
-
-	}
-	return 0;
-}
-
-int getCaracter(char* pResultado, char* mensaje, char* mensajeError, char minimo, char maximo, int reintentos)
-{
-
-	int retorno = -1;
-	char buffer;
-	if (pResultado !=NULL && mensaje != NULL && mensajeError != NULL && minimo <= maximo && reintentos >=0)
-	{
-		do{
-			printf("%s",mensaje);
-			scanf("%c",&buffer);
-			if(buffer >=minimo&& buffer<= maximo)
-			{
-				*pResultado=buffer;
-				retorno=0;
-				break;
-
-			}
-			else
-			{
-				printf("%s",mensajeError);
-				reintentos--;
-			}
-		}while(reintentos >=0);
-
-	}
-	return retorno;
-}
-
-
-
-int burbuja(int vec[], int tam, int criterio){ // criterio es como quiero ordenar los datos del array
-
-int aux, i, j;
-
-	for(i = 0; i<tam-1; i++){
-	for(j = i+1; j<tam; j++){
-
-		if(vec[i]>vec[j] && criterio == 1){ // de menor a mayor
-			aux =vec[i]; // swap
-			vec[i]= vec[j];
-			vec[j] = aux;
-		}
-		else if(vec[i]<vec[j] && criterio == 0){ // de mayor a menor
-			aux = vec[i]; // swap
-			vec[j] = vec[i];
-			vec[i] = aux;
-		}
-	}
-}
-return 0;
-}
-*/
