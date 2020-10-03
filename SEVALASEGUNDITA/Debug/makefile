@@ -23,19 +23,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: asdadasd
+all: SEVALASEGUNDITA
 
 # Tool invocations
-asdadasd: $(OBJS) $(USER_OBJS)
+SEVALASEGUNDITA: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MacOS X C Linker'
-	gcc  -o "asdadasd" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "SEVALASEGUNDITA" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) asdadasd
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) SEVALASEGUNDITA
 	-@echo ' '
 
 .PHONY: all clean dependents

@@ -4,15 +4,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/asdadasd.c \
+../src/SEVALASEGUNDITA.c \
 ../src/bibliotecaUTN.c 
 
 OBJS += \
-./src/asdadasd.o \
+./src/SEVALASEGUNDITA.o \
 ./src/bibliotecaUTN.o 
 
 C_DEPS += \
-./src/asdadasd.d \
+./src/SEVALASEGUNDITA.d \
 ./src/bibliotecaUTN.d 
 
 
