@@ -45,13 +45,13 @@ int getInt(int* pResultado, char mensaje[], char mensajeError[], int minimo, int
 int getFloat(float* pResultado, char mensaje[], char mensajeError[], int minimo, int maximo, int reintentos)
 {
 	int retorno=-1;
-	int bufferInt;
+	float bufferInt;
 	if(pResultado !=NULL && mensaje != NULL && mensajeError != NULL && minimo <= maximo && reintentos >=0)
 	{
 		do{
 			printf("%s", mensaje);
 			fpurge(stdin);
-			scanf("%d",&bufferInt);
+			scanf("%f",&bufferInt);
 
 				if(bufferInt >= minimo && bufferInt <= maximo){
 					*pResultado=bufferInt;
@@ -272,8 +272,6 @@ int findEmployeeById(employee* list, int len, int id, int* posicion){
 		else{
 			printf("\n El ID %d ha sido dado de BAJA", id);
 		}
-
-
 	}
 
 	return 0;
